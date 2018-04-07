@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <h4>Hydrometer Temperature Calibrator</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div class="row">
+                    <label for="specificGravity" class="col-sm-5 col-form-label">Specific Gravity</label>
+                    <div class="col-sm-5">
+                        <input type="number" 
+                               class="form-control"
+                               id="specificGravity" 
+                               ng-model="vm.data.specificGravity" 
+                               value="vm.data.specificGravity">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="temperature" class="col-sm-5 col-form-label">Temperature</label>
+                    <div class="col-sm-5">
+                        <input type="number" 
+                               class="form-control"
+                               id="temperature" 
+                               ng-model="vm.data.temperature" 
+                               value="vm.data.specificGravity">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="targetTemperature" class="col-sm-5 col-form-label">Target Temperature</label>
+                    <div class="col-sm-5">
+                        <input type="number" 
+                               class="form-control"
+                               id="targetTemperature" 
+                               ng-model="vm.data.targetTemperature" 
+                               value="vm.data.targetTemperature">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" value="F" id="fahrenheit" name="fahrenheit" class="custom-control-input">
+                            <label class="custom-control-label" for="fahrenheit">Fahrenheit</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" value="C" id="celsius" name="celsius" class="custom-control-input">
+                            <label class="custom-control-label" for="celsius">Celsius</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button ng-click="vm.calculate()" type="button" class="btn btn-light">Calculate</button>
+                <button ng-click="vm.reset()" type="button" class="btn btn-light">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
