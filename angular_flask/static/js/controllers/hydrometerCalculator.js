@@ -45,7 +45,6 @@
                      (1.00130346 - 0.000134722124 * targetTemperature + 0.00000204052596 * Math.pow(targetTemperature, 2) - 0.00000000232820948 * Math.pow(targetTemperature, 3))));
 		    var cgRounded = cg.toFixed(3);
             this.data.output = cgRounded;
-            console.log(this.data);
 		}
 
 	}

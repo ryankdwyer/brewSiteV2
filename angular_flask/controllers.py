@@ -23,6 +23,8 @@ session = api_manager.session
 @app.route('/blog')
 @app.route('/calculators')
 @app.route('/hydrometer')
+@app.route('/abv')
+@app.route('/srm')
 def basic_pages(**kwargs):
     return make_response(open('angular_flask/templates/index.html').read())
 

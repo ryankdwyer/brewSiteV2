@@ -26,6 +26,16 @@
                         controller: 'HydrometerController',
                         controllerAs: 'vm'
                     })
+                    .when('/abv', {
+                        templateUrl: 'static/partials/abv.html',
+                        controller: 'ABVController',
+                        controllerAs: 'vm'
+                    })
+                    .when('/srm', {
+                        templateUrl: 'static/partials/srm.html',
+                        controller: 'SRMController',
+                        controllerAs: 'vm',
+                    })
     		        .otherwise({
     		        	redirectTo: '/'
     		        });

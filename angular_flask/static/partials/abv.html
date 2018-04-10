@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <h4>ABV Calibrator</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div class="row">
+                    <label for="originalGravity" class="col-sm-5 col-form-label">Original Gravity</label>
+                    <div class="col-sm-5">
+                        <input type="number" 
+                               class="form-control"
+                               id="originalGravity" 
+                               ng-model="vm.data.originalGravity" 
+                               value="vm.data.originalGravity">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="finalGravity" class="col-sm-5 col-form-label">Final Gravity</label>
+                    <div class="col-sm-5">
+                        <input type="number" 
+                               class="form-control"
+                               id="finalGravity" 
+                               ng-model="vm.data.finalGravity" 
+                               value="vm.data.finalGravity">
+                    </div>
+                </div>
+                <div class="row">
+                    ABV: {{vm.data.abv}}%
+                </div>
+                <div class="row">
+                    Attenuation: {{vm.data.attenuation}}%
+                </div>
+                <div class="row">
+                    Calories: {{vm.data.calories}} per 12 oz.
+                </div>
+            </div>
+            <div class="row">
+                <button ng-click="vm.calculate()" type="button" class="btn btn-light">Calculate</button>
+                <button ng-click="vm.reset()" type="button" class="btn btn-light">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>

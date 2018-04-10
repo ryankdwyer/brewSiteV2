@@ -4,6 +4,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
+
             <div class="form-group">
                 <div class="row">
                     <label for="specificGravity" class="col-sm-5 col-form-label">Specific Gravity</label>
@@ -36,15 +37,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" value="F" id="fahrenheit" name="fahrenheit" class="custom-control-input">
-                            <label class="custom-control-label" for="fahrenheit">Fahrenheit</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" value="C" id="celsius" name="celsius" class="custom-control-input">
-                            <label class="custom-control-label" for="celsius">Celsius</label>
-                    </div>
+					<label for="units" class="col-sm-5 col-form-label">Temperature Units</label>
+					<select ng-model="vm.data.units" id="units" class="custom-select col-sm-5">
+					  	<option value="F" selected>Fahrenheit</option>
+					  	<option value="C">Celsius</option>
+					</select>
                 </div>
+				<div class="row">
+					<div class="col-sm-12">
+						Adjusted Gravity: {{vm.data.output}}
+					</div>
+				</div>
             </div>
             <div class="row">
                 <button ng-click="vm.calculate()" type="button" class="btn btn-light">Calculate</button>
