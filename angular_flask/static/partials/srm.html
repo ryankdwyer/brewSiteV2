@@ -4,15 +4,22 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-
             <div class="row">
-                SRM: {{vm.data.srm}}
-                Hex: {{vm.data.hex}}
+                <div class="col-sm-6">
+                    Amount
+                </div>
+                <div class="col-sm-6">
+                    Grain
+                </div>
             </div>
+
             <div class="row"
                  ng-repeat="grain in vm.data.grains">
                 <div class="col-sm-6">
-                    <input ng-model="grain.weight" type="number"/>
+                    <input ng-model="grain.weight" 
+                           type="number"
+                           min="0"
+                           step="0.01"/>
                 </div>
                 <div class="col-sm-6">
                     <select ng-model="grain"
@@ -20,14 +27,34 @@
                             ng-change="vm.handleGrainChage(grain, $index)"></select>
                 </div>
             </div>
+            <div class="row"></div>
 			<div class="row">
                 <div class="col-sm-6">
                     <label for="gallons">Gallons:</label>
                 </div>
                 <div class="col-sm-6">
-                    <input id="gallons" ng-model="vm.data.gallons" type="number"/>
+                    <input id="gallons" 
+                           ng-model="vm.data.gallons" 
+                           type="number"
+                           min="0"
+                           step="0.1"/>
                 </div>
 			</div>
+            <div class="row">
+                <div class="col-sm-6">
+                    SRM: {{vm.data.srm}}
+                </div>
+            </div>
+            <div class="row">
+                <div style="background-color: #{{vm.data.hex}};" class="col-sm-6">
+                    Hex: {{vm.data.hex}}
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <button ng-click="vm.calculate()" type="button" class="btn btn-light">Calculate</button>
+                <button ng-click="vm.reset()" type="button" class="btn btn-light">Reset</button>
+            </div>
         </div>
     </div>
 </div>

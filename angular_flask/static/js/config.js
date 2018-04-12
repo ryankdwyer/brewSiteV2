@@ -36,6 +36,11 @@
                         controller: 'SRMController',
                         controllerAs: 'vm',
                     })
+                    .when('/mash_water', {
+                        templateUrl: 'static/partials/mash_water.html',
+                        controller: 'MashController',
+                        controllerAs: 'vm',
+                    })
     		        .otherwise({
     		        	redirectTo: '/'
     		        });

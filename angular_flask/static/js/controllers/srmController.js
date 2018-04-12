@@ -10,15 +10,15 @@
         this.data = {
             grains: [{
                 grain: {},
-                weight: 0,
+                weight: 0.00,
             }, {
                 grain: {},
-                weight: 0,
+                weight: 0.00,
             }, {
                 grain: {},
-                weight: 0,
+                weight: 0.00,
             }],
-			gallons: 0,
+			gallons: 0.0,
             srm: '',
             hex: '',
         };
@@ -39,7 +39,7 @@
 			    mcu += calcMCU(pounds, lovibond, gallons);
 			}, this);
 			var srm = moreyCalc(mcu);
-			this.data.srm = srm;
+			this.data.srm = srm.toFixed(2);
 			var colorHex = srmToHex(srm);
 			this.data.hex = colorHex;
         }
@@ -53,7 +53,6 @@
                 return false;
             }
             this.data.grains.splice(idx, 1);
-            this.calculate();
         }
 
         function getGrainOptions () {
@@ -63,18 +62,21 @@
         function handleGrainChage(grain, idx) {
             grain.weight = this.data.grains[idx].weight;
             this.data.grains[idx] = grain;
-            this.calculate();
         }
 
         function reset () {
             this.data = {
                 grains: [{
-                    grain: 'Pick a grain'
+                    grain: {},
+                    weight: 0.00,
                 }, {
-                    grain: 'Pick a grain'
+                    grain: {},
+                    weight: 0.00,
                 }, {
-                    grain: 'Pick a grain'
+                    grain: {},
+                    weight: 0.00,
                 }],
+			    gallons: 0.0,
                 srm: '',
                 hex: '',
             };       
