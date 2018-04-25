@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <h4>Priming Calculator</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div class="row">
+                    <label for="volumes" class="col-sm-5 form-label">Desired CO2 Volumes</label>
+                    <div class="col-sm-5">
+                        <input class="col-sm-5"
+                               id="volumes"
+                               type="number"
+                               ng-model="vm.data.volumes"
+                               value="vm.data.volumes"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="beerVolume" class="col-sm-5 form-label">Volume of Beer (gal)</label>
+                    <div class="col-sm-5">
+                        <input class="col-sm-5"
+                               id="beerVolume"
+                               type="number"
+                               ng-model="vm.data.beerVolume"
+                               value="vm.data.beerVolume"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="temp" class="col-sm-5 form-label">Temperature of Beer (°F)</label>
+                    <div class="col-sm-5">
+                        <input class="col-sm-5"
+                               id="temp"
+                               type="number"
+                               ng-model="vm.data.temp"
+                               value="vm.data.temp"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <button ng-click="vm.calculate()" type="button" class="btn btn-light">Calculate</button>
+                    <button ng-click="vm.reset()" type="button" class="btn btn-light">Reset</button>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">Ounces of corn sugar:</div>
+                    <div class="col-sm-5">{{vm.data.output}}</div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

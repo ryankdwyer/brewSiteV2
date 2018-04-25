@@ -20,6 +20,8 @@
 	<script src="/static/js/controllers/hydrometerCalculator.js"></script>
 	<script src="/static/js/controllers/abvController.js"></script>
 	<script src="/static/js/controllers/SRMController.js"></script>
+	<script src="/static/js/controllers/mashController.js"></script>
+	<script src="/static/js/controllers/primingController.js"></script>
  	<script src="/static/js/services.js"></script>
  	<script src="/static/js/config.js"></script>
 
@@ -35,8 +37,15 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
-	      <li class="nav-item">
-	        <a class="nav-link" href="/calculators">Tools</a>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Tools</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/hydrometer">Hydrometer Temperature Correction</a>
+                <a class="dropdown-item" href="/abv">ABV Calculator</a>
+                <a class="dropdown-item" href="/srm">SRM Calculator</a>
+                <a class="dropdown-item" href="/mash_water">Mash Water Calculator</a>
+                <a class="dropdown-item" href="/priming">Priming Calculator</a>
+            </div>
 	      </li>
 	    </ul>
 	  </div>
