@@ -10,7 +10,7 @@
                 });
     		    $routeProvider
     		        .when('/', {
-    		        	templateUrl: 'static/partials/landing.html',
+    		        	templateUrl: 'static/partials/calculators.html',
     		        	controller: 'IndexController'
     		        })
     		        .when('/about', {
@@ -39,6 +39,11 @@
                     .when('/mash_water', {
                         templateUrl: 'static/partials/mash_water.html',
                         controller: 'MashController',
+                        controllerAs: 'vm',
+                    })
+                    .when('/priming', {
+                        templateUrl: 'static/partials/priming.html',
+                        controller: 'PrimingController',
                         controllerAs: 'vm',
                     })
     		        .otherwise({
